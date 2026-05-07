@@ -1,6 +1,6 @@
-import React from 'react';
 import './Hero.css';
 import ScrollReveal from './ScrollReveal';
+import profile from '../assets/Profile.png';
 
 const Hero = () => {
   return (
@@ -20,7 +20,7 @@ const Hero = () => {
         
         <div className="hero-image-wrapper">
           <div className="hero-image-container">
-            <img src="./src/assets/profile.png" alt="Rayhan Alviansyah" className="hero-image" />
+            <img src={profile} alt="Rayhan Alviansyah" className="hero-image" />
             <div className="hero-location">
               <span className="location-icon">📍</span> Bogor, Indonesia
             </div>
