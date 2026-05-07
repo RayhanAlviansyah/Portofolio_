@@ -1,0 +1,148 @@
+:root {
+  /* Default to Dark Mode / Premium Portfolio Styling */
+  --bg-main: #101116; /* Very dark background */
+  --bg-secondary: #1a1b26; /* Slightly lighter for cards/sections */
+  --accent: #e8bd7d; /* Gold / Copper accent */
+  --accent-hover: #f3c880;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  
+  --border-color: rgba(232, 189, 125, 0.2); /* Faint gold border */
+  --border-radius: 12px;
+  
+  --font-main: 'Outfit', sans-serif;
+  
+  --transition: all 0.3s ease-in-out;
+  --shadow-glow: 0 4px 20px rgba(232, 189, 125, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: var(--font-main);
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: var(--transition);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* Reusable styles */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #101116;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-outline {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background-color: rgba(232, 189, 125, 0.1);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Glassmorphism / Card Base */
+.glass-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  transition: var(--transition);
+}
+
+.glass-card:hover {
+  border-color: rgba(232, 189, 125, 0.5);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-5px);
+}
+
+/* Scroll Reveal Animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
