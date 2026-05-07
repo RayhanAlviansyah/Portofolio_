@@ -6,7 +6,7 @@ import CourtBookingImg from '../assets/Project/CourtBook.png';
 import JurnalImg from '../assets/Project/Jurnalku.png';
 import TicketingAppImg from '../assets/Project/TicketingApp.png';
 import ElearningImg from '../assets/Project/E-learning.png';
-import finbuddyImg from '../assets/Project/Finbuddy.png';
+import finbuddyImg from '../assets/Project/FinBuddy.png';
 import backendpemula from '../assets/Sertifikat/Bakcend-Pemula-JavaScript.jpg';
 import react from '../assets/Sertifikat/Belajar-React.jpg';
 import frontendweb from '../assets/Sertifikat/Front-end-pemula.jpg';
