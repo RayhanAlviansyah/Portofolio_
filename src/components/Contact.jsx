@@ -1,4 +1,3 @@
-import React from 'react';
 import './Contact.css';
 import ScrollReveal from './ScrollReveal';
 import { FaGithub } from "react-icons/fa";
@@ -6,25 +5,39 @@ import { FaLinkedin } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa6";
 import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 
 const Contact = () => {
-  const form = useRef();
+const form = useRef();
+const [showSuccess, setShowSuccess] = useState(false);
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+const sendEmail = (e) => {
+    e.preventDefault();
 
-        emailjs.sendForm('service_66gapun', 'template_wg7497m', form.current, 'WB_PIKreunliRp4b3')
-            .then((result) => {
-                console.log(result.text);
-                alert('Email sent successfully!');
-                form.current.reset();
-            }, (error) => {
-                console.log(error.text);
-                alert('Failed to send email');
-            });
-    };
+    emailjs.sendForm(
+        'service_66gapun',
+        'template_wg7497m',
+        form.current,
+        'WB_PIKreunliRp4b3'
+    ).then(
+        (result) => {
+            console.log(result.text);
+
+            setShowSuccess(true);
+
+            setTimeout(() => {
+                setShowSuccess(false);
+            }, 3000);
+
+            form.current.reset();
+        },
+        (error) => {
+            console.log(error.text);
+            alert('Failed to send email');
+        }
+    );
+};
 
   return (
     <section id="contact" className="section bg-card-section">
@@ -67,6 +80,11 @@ const Contact = () => {
               </div>
               <button type="submit" className="btn-primary w-full text-center">Send</button>
             </form>
+            {showSuccess && (
+              <div className="success-popup">
+                Email sent successfully ✨
+              </div>
+            )}
           </div>
         </div>
       </ScrollReveal>

@@ -12,7 +12,6 @@ import react from '../assets/Sertifikat/Belajar-React.jpg';
 import frontendweb from '../assets/Sertifikat/Front-end-pemula.jpg';
 import logicpemrograman from '../assets/Sertifikat/Programing-logic-101.jpg';
 import dasarjavascript from '../assets/Sertifikat/Dasar-Javascript.jpg';
-
 import genaiaws from '../assets/Sertifikat/Gen-AI-di-AWS.jpg';
 import uiux from '../assets/Sertifikat/UI-UX.jpg';
 import financial from '../assets/Sertifikat/Financial-Literacy.jpg';
